@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/bottom_nav_color.xml" value="0.4125" />
+        <entry key="app/src/main/res/drawable/bottom_shape.xml" value="0.4125" />
+        <entry key="app/src/main/res/drawable/default_dot.xml" value="0.4125" />
+        <entry key="app/src/main/res/drawable/default_login.xml" value="0.4145" />
+        <entry key="app/src/main/res/drawable/dot.xml" value="0.4045" />
+        <entry key="app/src/main/res/drawable/fragment_style.xml" value="0.4145" />
+        <entry key="app/src/main/res/drawable/home_back1.xml" value="0.4125" />
+        <entry key="app/src/main/res/drawable/ic_heart_fill.xml" value="0.4125" />
+        <entry key="app/src/main/res/drawable/ic_linkin.xml" value="0.412" />
+        <entry key="app/src/main/res/drawable/ic_search2.xml" value="0.4145" />
+        <entry key="app/src/main/res/drawable/ic_settings.xml" value="0.4145" />
+        <entry key="app/src/main/res/drawable/love_action.xml" value="0.4125" />
+        <entry key="app/src/main/res/drawable/message_label.xml" value="0.4125" />
+        <entry key="app/src/main/res/drawable/profile_section.xml" value="0.4125" />
+        <entry key="app/src/main/res/drawable/ratting_bar.xml" value="0.4125" />
+        <entry key="app/src/main/res/drawable/register_bar.xml" value="0.4145" />
+        <entry key="app/src/main/res/drawable/relay_backgnd.xml" value="0.4125" />
+        <entry key="app/src/main/res/drawable/round_back.xml" value="0.4145" />
+        <entry key="app/src/main/res/drawable/save_button.xml" value="0.4045" />
+        <entry key="app/src/main/res/drawable/selected_dot.xml" value="0.4125" />
+        <entry key="app/src/main/res/drawable/tab_selector.xml" value="0.4125" />
+        <entry key="app/src/main/res/drawable/text_instyle.xml" value="0.4145" />
+        <entry key="app/src/main/res/layout/activity_add_establishment.xml" value="0.4895833333333333" />
+        <entry key="app/src/main/res/layout/activity_favourite_list.xml" value="0.4895833333333333" />
+        <entry key="app/src/main/res/layout/activity_floating_button.xml" value="0.4895833333333333" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.4895833333333333" />
+        <entry key="app/src/main/res/layout/activity_item_view.xml" value="0.44483985765124556" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.4859375" />
+        <entry key="app/src/main/res/layout/activity_menu.xml" value="0.4859375" />
+        <entry key="app/src/main/res/layout/activity_myestablishment_list.xml" value="0.51875" />
+        <entry key="app/src/main/res/layout/activity_profile.xml" value="0.4895833333333333" />
+        <entry key="app/src/main/res/layout/activity_setting.xml" value="0.4895833333333333" />
+        <entry key="app/src/main/res/layout/estabentry.xml" value="0.4895833333333333" />
+        <entry key="app/src/main/res/layout/fragment_establishment.xml" value="0.4859375" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.4895833333333333" />
+        <entry key="app/src/main/res/layout/fragment_location.xml" value="0.4859375" />
+        <entry key="app/src/main/res/layout/fragment_one.xml" value="0.4895833333333333" />
+        <entry key="app/src/main/res/layout/fragment_three.xml" value="0.4895833333333333" />
+        <entry key="app/src/main/res/layout/fragment_two.xml" value="0.4713541666666667" />
+        <entry key="app/src/main/res/layout/fragment_user.xml" value="0.4859375" />
+        <entry key="app/src/main/res/layout/fragment_user_profile.xml" value="0.4859375" />
+        <entry key="app/src/main/res/layout/fragment_view_pager.xml" value="0.4895833333333333" />
+        <entry key="app/src/main/res/layout/myestab_entity.xml" value="0.5" />
+        <entry key="app/src/main/res/menu/bottom_nav.xml" value="0.4859375" />
+        <entry key="app/src/main/res/menu/my_menu_pop.xml" value="0.51875" />
+        <entry key="app/src/main/res/menu/navigation_menu.xml" value="0.4" />
+        <entry key="app/src/main/res/menu/pop_out_menu.xml" value="0.4895833333333333" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

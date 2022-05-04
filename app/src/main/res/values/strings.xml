@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ProjectFare</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add">add</string>
+    <string name="profile">Profile</string>
+    <string name="setting">Setting</string>
+    <string name="addEstablishment">Add Establishment</string>
+    <string name="favourite">Favourite Establishments</string>
+    <string name="no_data_available">No establishment available</string>
+    <string name="myreview"><u>My Review</u></string>
+</resources>

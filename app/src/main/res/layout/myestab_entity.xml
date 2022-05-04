@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="12dp"
+    android:id="@+id/estabHolder"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginLeft="5dp"
+    android:backgroundTint="#efefef">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/photod"
+                    android:id="@+id/myestabImage"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center"
+                    android:id="@+id/myestabname"
+                    android:textSize="15dp"
+                    android:layout_marginTop="3dp"/>
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="250dp"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/liner1"
+                    android:layout_marginLeft="5dp"
+                    android:padding="5dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/myreview"
+                        android:fontFamily="sans-serif-medium"
+                        android:textSize="17dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/myestbReview"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp">
+
+                        <ImageButton
+                            android:id="@+id/heartButtonView"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:background="@color/transparent2"
+                            android:clickable="true"
+                            android:onClick="heartButtonOnAction"
+                            android:src="@drawable/ic_heartfill_view"
+                            app:layout_constraintBottom_toBottomOf="parent" />
+
+                        <TextView
+                            android:id="@+id/loveTvView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/message_label"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="11dp"
+                            app:layout_constraintBottom_toTopOf="@+id/heartButtonView"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.803"
+                            app:layout_constraintStart_toStartOf="@+id/heartButton" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="15dp">
+
+                        <ImageButton
+                            android:id="@+id/likeButtonView"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:background="@color/transparent2"
+                            android:onClick="likeButtonOnAction"
+                            android:src="@drawable/like_fill"
+                            app:layout_constraintBottom_toBottomOf="parent" />
+
+                        <TextView
+                            android:id="@+id/likeTvView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/message_label"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="11dp"
+                            app:layout_constraintBottom_toTopOf="@+id/likeButtonView"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.803"
+                            app:layout_constraintStart_toStartOf="@+id/likeButton" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="15dp">
+
+                        <ImageButton
+                            android:id="@+id/hateButtonView"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:background="@color/transparent2"
+                            android:onClick="hateButtonOnAction"
+                            android:src="@drawable/sad_fill"
+                            app:layout_constraintBottom_toBottomOf="parent" />
+
+                        <TextView
+                            android:id="@+id/hateTvView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/message_label"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="11dp"
+                            app:layout_constraintBottom_toTopOf="@+id/hateButtonView"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.803"
+                            app:layout_constraintStart_toStartOf="@+id/hateButton" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical">
+            <ImageButton
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@color/transparent2"
+                android:id="@+id/moreMenuView"
+                android:src="@drawable/ic_menu_more_vertical_view"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

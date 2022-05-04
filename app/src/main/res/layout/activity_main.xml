@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/ic_top"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/parentRelay"
+        android:background="@drawable/ic_bottom">
+
+        <RelativeLayout
+            android:id="@+id/relay1"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/register_bar">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/ic_logob" />
+
+            <LinearLayout
+                android:id="@+id/linPhone"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_below="@id/logo"
+                android:layout_marginTop="70dp"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="40dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/phoneText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Enter your phone number"
+                        android:textAllCaps="false"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:id="@+id/tv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Incorrect input"
+                        android:textAllCaps="false"
+                        android:textColor="@color/red"
+                        android:textSize="10dp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/phoneN"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/text_instyle"
+                    android:drawableLeft="@drawable/phone"
+                    android:fontFamily="sans-serif-light"
+                    android:inputType="number"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textSize="20dp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/enterB"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/text_instyle"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Enter"
+                    android:textAllCaps="false"
+                    android:textColor="@color/orange"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linloading"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_below="@id/logo"
+                android:layout_marginTop="70dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="40dp"
+                android:visibility="gone">
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/lo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linCode"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_below="@id/logo"
+                android:layout_marginTop="70dp"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="40dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Enter the code"
+                    android:textAllCaps="false"
+                    android:textSize="10dp" />
+
+                <EditText
+                    android:id="@+id/codeN"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/text_instyle"
+                    android:drawableLeft="@drawable/key"
+                    android:fontFamily="sans-serif-light"
+                    android:inputType="number"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textSize="20dp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/verifyB"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/text_instyle"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Verify"
+                    android:textAllCaps="false"
+                    android:textColor="@color/orange"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_below="@id/relay1"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="200dp"
+            android:background="@drawable/default_login"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="40dp">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/transparent2"
+                android:src="@drawable/ic_google" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:id="@+id/linkin"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_linkin"
+                android:background="@color/transparent2"/>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_meta"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:background="@color/transparent2"
+                android:layout_marginTop="30dp"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

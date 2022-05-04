@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="12dp"
+    android:id="@+id/contentHolder"
+    app:cardCornerRadius="16dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginLeft="5dp"
+    android:backgroundTint="#efefef">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/liniear1"
+        android:orientation="horizontal"
+        android:layout_margin="5dp">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="70dp"
+            android:src="@drawable/photod"
+            android:id="@+id/estaImageV"
+            android:layout_height="70dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:id="@+id/linear2"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvname"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:text="Name"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvtype"
+                android:fontFamily="sans-serif-light"
+                android:layout_marginTop="5dp"
+                android:textSize="13dp"
+                android:text="Type"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/tvreview"
+                android:layout_marginTop="5dp"
+                android:textSize="16dp"
+                android:layout_height="wrap_content"
+                android:text="Reviews"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

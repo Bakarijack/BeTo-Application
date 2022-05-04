@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1086100781794",
+    "project_id": "projectfare-f7245",
+    "storage_bucket": "projectfare-f7245.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1086100781794:android:faeb268a9cd2e767da7cbb",
+        "android_client_info": {
+          "package_name": "com.example.projectfare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1086100781794-0nqk8imaodkehshbrl70fdose2ivq4dp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2KM19EfwDlBIxo-JLtyJ8xYI4jTRWahU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1086100781794-0nqk8imaodkehshbrl70fdose2ivq4dp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

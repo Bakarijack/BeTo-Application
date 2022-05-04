@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainLayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".EstablishmentFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.SearchView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/searchEngine"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyV"
+            android:layout_width="match_parent"
+            android:layout_below="@id/searchEngine"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="50dp"
+            android:layout_centerInParent="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/no_data_available"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="40dp"
+            android:id="@+id/defaultText"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="end|bottom">
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/addButton"
+            android:layout_marginRight="20dp"
+            android:contentDescription="@string/add"
+            android:src="@drawable/ic_plus4"
+            android:backgroundTint="@color/orange"
+            app:fabSize="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="70dp"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/favorite"
+            app:fabSize="normal"
+            app:layout_constraintBottom_toTopOf="@+id/addButton"
+            app:layout_constraintEnd_toEndOf="@+id/addButton"
+            app:layout_constraintStart_toStartOf="@+id/addButton"
+            android:layout_marginBottom="24dp"
+            android:src="@drawable/heart"
+            android:backgroundTint="@color/orange"/>
+
+        <TextView
+            android:id="@+id/favoriText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="Add favourite"
+            app:layout_constraintBottom_toBottomOf="@+id/favorite"
+            app:layout_constraintEnd_toStartOf="@+id/favorite"
+            app:layout_constraintTop_toTopOf="@+id/favorite" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/orange"
+            app:layout_constraintBottom_toTopOf="@+id/favorite"
+            app:fabSize="normal"
+            android:src="@drawable/house"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintEnd_toEndOf="@+id/favorite"
+            app:layout_constraintStart_toStartOf="@+id/favorite"
+            android:id="@+id/addEstablishment"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:id="@+id/establishmentText"
+            app:layout_constraintBottom_toBottomOf="@+id/addEstablishment"
+            app:layout_constraintEnd_toStartOf="@+id/addEstablishment"
+            app:layout_constraintTop_toTopOf="@+id/addEstablishment"
+            android:text="Add establishment"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

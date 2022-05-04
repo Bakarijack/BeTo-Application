@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeFragment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:id="@+id/relay1"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@drawable/relay_backgnd">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent">
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <AnalogClock
+                        android:layout_width="250dp"
+                        android:layout_height="250dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:layout_width="60dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/ic_notification"
+                        android:background="@color/transparent2"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/relay2"
+            android:background="@drawable/relay_backgnd"
+            android:layout_below="@id/relay1"
+            android:layout_marginTop="10dp">
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relay3"
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:layout_below="@id/relay2"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/relay_backgnd">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        app:tabTextColor="@color/black"
+                        android:id="@+id/tabLayout"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="50dp"
+                        android:contextClickable="true"
+                        app:tabBackground="@drawable/tab_selector"
+                        app:tabGravity="center"
+                        app:tabIndicatorHeight="0dp"
+                        app:tabIndicatorColor="@color/orange"
+                        app:tabInlineLabel="true"/>
+                </RelativeLayout>
+
+                <androidx.viewpager.widget.ViewPager
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:id="@+id/viewPager"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/default_login"
+            android:layout_below="@id/relay3">
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</FrameLayout>

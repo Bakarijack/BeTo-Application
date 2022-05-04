@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MyBar" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimaryDark">@color/orange</item>
+        <item name="colorOnPrimary">@color/white</item>
+    </style>
+
+    <style name="Cut" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <style name="Rounded" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">@color/orange</item>
+        <item name="boxStrokeWidth">2dp</item>
+    </style>
+
+    <style name="FoursquareReviewRating" parent="Widget.AppCompat.RatingBar.Small">
+        <item name="colorControlNormal">#ABBCCF</item>
+        <item name="colorControlActivated">#F0C909</item>
+    </style>
+    <style name="CustomHeartsRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/ratting_bar</item>
+        <item name="android:minHeight">32dip</item>
+        <item name="android:maxHeight">32dip</item>
+    </style>
+</resources>

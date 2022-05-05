@@ -43,7 +43,7 @@ public class AddEstablishment extends AppCompatActivity {
     private CircleImageView circleImageView;
 
 
-    private String[] estTypes = {"Cafe","Bar","Restaurant"};
+    private String[] estTypes = {"Cafe","Bar","Restaurant","Others"};
     private String spinItem;
 
     //private DatabaseHandler databaseHandler;

@@ -4,9 +4,9 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -17,37 +17,43 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectFare">
         <activity
+            android:name=".EditActivity"
+            android:exported="false"
+            android:theme="@style/MyBar"
+            android:label="@string/edit_data"
+            android:screenOrientation="portrait"/>
+        <activity
             android:name=".ItemViewActivity"
             android:exported="false"
             android:screenOrientation="portrait"
-            android:theme="@style/MyBar"/>
+            android:theme="@style/MyBar" />
         <activity
             android:name=".HomeActivity"
-            android:screenOrientation="portrait"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".MyEstablishmentList"
             android:exported="false"
-            android:screenOrientation="portrait"
             android:label="@string/favourite"
+            android:screenOrientation="portrait"
             android:theme="@style/MyBar" />
         <activity
             android:name=".AddEstablishment"
-            android:screenOrientation="portrait"
             android:exported="false"
             android:label="@string/addEstablishment"
+            android:screenOrientation="portrait"
             android:theme="@style/MyBar" />
         <activity
             android:name=".Setting"
             android:exported="false"
-            android:screenOrientation="portrait"
             android:label="@string/setting"
+            android:screenOrientation="portrait"
             android:theme="@style/MyBar" />
         <activity
             android:name=".Profile"
             android:exported="false"
-            android:screenOrientation="portrait"
             android:label="@string/profile"
+            android:screenOrientation="portrait"
             android:theme="@style/MyBar" />
         <activity
             android:name=".Menu"
@@ -56,8 +62,8 @@
             android:theme="@style/MyBar" />
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="portrait"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

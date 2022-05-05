@@ -114,8 +114,7 @@ public class EstablishmentFragment extends Fragment implements CallBackItemTouch
             @Override
             public void onClick(View view) {
                 if (!isAllFabsVisible){
-                    addButton.animate().setDuration(1000);
-                    addButton.setImageResource(R.drawable.ic_multiply);
+                    addButton.animate().rotation(135f).setDuration(500).start();
                     favouriteButton.show();
                     establishmentButton.show();
                     favouriteTv.setVisibility(View.VISIBLE);
@@ -123,8 +122,7 @@ public class EstablishmentFragment extends Fragment implements CallBackItemTouch
 
                     isAllFabsVisible = true;
                 }else{
-                    addButton.animate().setDuration(1000);
-                    addButton.setImageResource(R.drawable.ic_plus4);
+                    addButton.animate().rotation(0f).setDuration(300).start();
                     favouriteButton.hide();
                     establishmentButton.hide();
                     favouriteTv.setVisibility(View.GONE);

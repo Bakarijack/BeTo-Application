@@ -112,6 +112,28 @@ public class EstablishmentDatabaseHandler extends DatabaseHandler{
 
     }
 
+    public boolean updateEstablishmentData(String name,String type,String locatione,String reviewId,CircleImageView circleImageView){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+
+        if (locatione.isEmpty()){
+            locatione = "Unspecified";
+        }
+
+        values.put("name",String.valueOf(name));
+        values.put("estType",String.valueOf(type));
+        values.put("estLocation",String.valueOf(locatione));
+        values.put("estImage",String.valueOf(circleImageViewToByte(circleImageView)));
+
+        long result = db.update("establishmentData",values,"reviewId=?",new String[]{String.valueOf(reviewId)});
+
+        if (result == -1){
+            return false;
+        }else {
+            return true;
+        }
+    }
+
 
     public Cursor getData(){
         SQLiteDatabase db = this.getWritableDatabase();

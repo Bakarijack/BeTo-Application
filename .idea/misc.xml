@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/border_shape.xml" value="0.4055" />
         <entry key="app/src/main/res/drawable/bottom_nav_color.xml" value="0.4125" />
         <entry key="app/src/main/res/drawable/bottom_shape.xml" value="0.4125" />
         <entry key="app/src/main/res/drawable/default_dot.xml" value="0.4125" />
@@ -26,6 +27,7 @@
         <entry key="app/src/main/res/drawable/tab_selector.xml" value="0.4125" />
         <entry key="app/src/main/res/drawable/text_instyle.xml" value="0.4145" />
         <entry key="app/src/main/res/layout/activity_add_establishment.xml" value="0.4895833333333333" />
+        <entry key="app/src/main/res/layout/activity_edit.xml" value="0.51875" />
         <entry key="app/src/main/res/layout/activity_favourite_list.xml" value="0.4895833333333333" />
         <entry key="app/src/main/res/layout/activity_floating_button.xml" value="0.4895833333333333" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.4895833333333333" />

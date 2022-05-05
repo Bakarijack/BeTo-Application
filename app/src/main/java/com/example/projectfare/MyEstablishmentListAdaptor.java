@@ -1,6 +1,7 @@
 package com.example.projectfare;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
@@ -10,7 +11,6 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.PopupMenu;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -60,7 +60,15 @@ public class MyEstablishmentListAdaptor extends RecyclerView.Adapter<MyEstablish
                     public boolean onMenuItemClick(MenuItem menuItem) {
                         switch (menuItem.getItemId()){
                             case R.id.edit:
-                                Toast.makeText(context, "edit clicked", Toast.LENGTH_SHORT).show();
+                                //Toast.makeText(context, "edit clicked", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(holder.mymenuNav.getContext(),EditActivity.class);
+                                intent.putExtra("estname",myEstablishmentArrayList.get(holder.getAdapterPosition()).getEstablishmentName());
+                                intent.putExtra("esttype",myEstablishmentArrayList.get(holder.getAdapterPosition()).getEstablishmentType());
+                                intent.putExtra("estreview",myEstablishmentArrayList.get(holder.getAdapterPosition()).getReviewComment());
+                                intent.putExtra("estlocation",myEstablishmentArrayList.get(holder.getAdapterPosition()).getEstablishmentLocation());
+                                intent.putExtra("imageBytes",myEstablishmentArrayList.get(holder.getAdapterPosition()).getImageBytes());
+                                intent.putExtra("reviewId",myEstablishmentArrayList.get(holder.getAdapterPosition()).getReviewId());
+                                holder.mymenuNav.getContext().startActivity(intent);
                                 break;
                         }
                         return true;

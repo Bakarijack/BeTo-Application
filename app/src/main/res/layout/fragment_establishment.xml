@@ -10,10 +10,13 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:gravity="center"
+        android:layout_alignParentTop="true"
         android:layout_height="match_parent">
         <androidx.appcompat.widget.SearchView
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:gravity="top"
+            android:layout_alignParentTop="true"
             android:id="@+id/searchEngine"/>
 
         <androidx.recyclerview.widget.RecyclerView
@@ -73,7 +76,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            android:text="Add favourite"
+            android:text="My list"
             app:layout_constraintBottom_toBottomOf="@+id/favorite"
             app:layout_constraintEnd_toStartOf="@+id/favorite"
             app:layout_constraintTop_toTopOf="@+id/favorite" />

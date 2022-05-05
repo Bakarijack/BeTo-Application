@@ -34,6 +34,21 @@ public class ReviewsDatabaseHandler extends DatabaseHandler{
         db.close();
     }
 
+    public boolean updateReviewComment(String review, String reviewId){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+
+        values.put("review",review);
+        long result = db.update("reviews",values,"reviewId = ?", new String[]{reviewId});
+
+        if (result == -1){
+            return false;
+        }else {
+            return true;
+        }
+
+    }
+
     public Cursor getData(){
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery("select * from reviews",null);

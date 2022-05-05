@@ -17,51 +17,51 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectFare">
         <activity
-            android:name=".EditActivity"
+            android:name=".activityfiles.EditActivity"
             android:exported="false"
             android:theme="@style/MyBar"
             android:label="@string/edit_data"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".ItemViewActivity"
+            android:name=".activityfiles.ItemViewActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             android:theme="@style/MyBar" />
         <activity
-            android:name=".HomeActivity"
+            android:name=".activityfiles.HomeActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".MyEstablishmentList"
+            android:name=".activityfiles.MyEstablishmentList"
             android:exported="false"
             android:label="@string/favourite"
             android:screenOrientation="portrait"
             android:theme="@style/MyBar" />
         <activity
-            android:name=".AddEstablishment"
+            android:name=".activityfiles.AddEstablishment"
             android:exported="false"
             android:label="@string/addEstablishment"
             android:screenOrientation="portrait"
             android:theme="@style/MyBar" />
         <activity
-            android:name=".Setting"
+            android:name=".activityfiles.Setting"
             android:exported="false"
             android:label="@string/setting"
             android:screenOrientation="portrait"
             android:theme="@style/MyBar" />
         <activity
-            android:name=".Profile"
+            android:name=".activityfiles.Profile"
             android:exported="false"
             android:label="@string/profile"
             android:screenOrientation="portrait"
             android:theme="@style/MyBar" />
         <activity
-            android:name=".Menu"
+            android:name=".activityfiles.Menu"
             android:exported="true"
             android:screenOrientation="portrait"
             android:theme="@style/MyBar" />
         <activity
-            android:name=".MainActivity"
+            android:name=".activityfiles.MainActivity"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>

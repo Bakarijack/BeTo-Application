@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:id="@+id/mainLayout"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".EstablishmentFragment">
+    tools:context=".menufragments.EstablishmentFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -68,7 +68,7 @@
             app:layout_constraintEnd_toEndOf="@+id/addButton"
             app:layout_constraintStart_toStartOf="@+id/addButton"
             android:layout_marginBottom="24dp"
-            android:src="@drawable/heart"
+            android:src="@drawable/list"
             android:backgroundTint="@color/orange"/>
 
         <TextView

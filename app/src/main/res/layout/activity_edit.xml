@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:padding="10dp"
     android:gravity="center_vertical"
-    tools:context=".EditActivity">
+    tools:context=".activityfiles.EditActivity">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/photoE"

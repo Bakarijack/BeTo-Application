@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:id="@+id/map"
     android:layout_height="match_parent"
-    tools:context=".LocationFragment"
+    tools:context=".menufragments.LocationFragment"
     android:background="@drawable/pic2"
     android:name="com.google.android.gms.maps.SupportMapFragment" >
 

@@ -110,7 +110,7 @@ public class EstablishmentFragment extends Fragment implements CallBackItemTouch
         });
 
         addButton.setAlpha(0f);
-        addButton.animate().alpha(1f).setDuration(1500);
+        addButton.animate().alpha(1f).setDuration(1000);
 
 
         favouriteButton.setVisibility(View.GONE);
@@ -125,7 +125,7 @@ public class EstablishmentFragment extends Fragment implements CallBackItemTouch
             @Override
             public void onClick(View view) {
                 if (!isAllFabsVisible){
-                    addButton.animate().rotation(135f).setDuration(500).start();
+                    addButton.animate().rotation(135f).setDuration(400).start();
                     favouriteButton.show();
                     establishmentButton.show();
                     favouriteTv.setVisibility(View.VISIBLE);

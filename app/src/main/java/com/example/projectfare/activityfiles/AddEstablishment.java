@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -47,6 +48,25 @@ public class AddEstablishment extends AppCompatActivity {
     private FloatingActionButton imgPick;
     private ImageButton imgView;
     private CircleImageView circleImageView;
+    private RelativeLayout relativeLayout1,relativeLayoutLoader;
+
+    Handler handler1 = new Handler();
+    Runnable runnable1 =  new Runnable() {
+        @Override
+        public void run() {
+            relativeLayout1.setVisibility(View.INVISIBLE);
+            relativeLayoutLoader.setVisibility(View.VISIBLE);
+        }
+    };
+
+    Handler handler2 = new Handler();
+    Runnable runnable2 = new Runnable() {
+        @Override
+        public void run() {
+            relativeLayoutLoader.setVisibility(View.INVISIBLE);
+            relativeLayout1.setVisibility(View.VISIBLE);
+        }
+    };
 
 
     private String[] estTypes = {"Cafe","Bar","Restaurant","Others"};
@@ -138,6 +158,14 @@ public class AddEstablishment extends AppCompatActivity {
                 .start();
     }
 
+    public void viewAnimation1(){
+        relativeLayout1 = (RelativeLayout) findViewById(R.id.relay1);
+        relativeLayoutLoader = (RelativeLayout) findViewById(R.id.gifLoader);
+
+        handler1.postDelayed(runnable1,0);
+        handler2.postDelayed(runnable2,1150);
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -195,6 +223,7 @@ public class AddEstablishment extends AppCompatActivity {
         getReviewData();
 
         if (establishmentDatabaseHandler.insertEstablishmentData(ename, spinItem, food, elocation, reviewModalClass.getId(),circleImageView) == true) {
+            viewAnimation1();
             Toast.makeText(AddEstablishment.this, "Establishment added successfully", Toast.LENGTH_SHORT).show();
             establishmentName.setText("");
             establishmentLocation.setText("");
@@ -257,10 +286,7 @@ public class AddEstablishment extends AppCompatActivity {
 
         if (reviewsDatabaseHandler.insertReviewData(getCurrentDate(),userModalClass.getName(),review.getText().toString()) == false){
             Toast.makeText(AddEstablishment.this,"failed to add review data",Toast.LENGTH_SHORT).show();
-        }else{
-            Toast.makeText(AddEstablishment.this,"review data successfully",Toast.LENGTH_SHORT).show();
         }
-
     }
 
 

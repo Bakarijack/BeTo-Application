@@ -9,6 +9,8 @@
     <androidx.appcompat.widget.SearchView
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:background="@color/orange"
+        android:layout_alignParentTop="true"
         android:id="@+id/searchV"/>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/myestabRecycleView"

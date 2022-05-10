@@ -87,6 +87,7 @@ public class EstablishmentFragment extends Fragment implements CallBackItemTouch
         adapter.registerAdapterDataObserver(observer);
         displayData();
 
+
         //ids for the floating buttons
         addButton = (FloatingActionButton) view.findViewById(R.id.addButton);
         favouriteButton = (FloatingActionButton) view.findViewById(R.id.favorite);
@@ -247,7 +248,8 @@ public class EstablishmentFragment extends Fragment implements CallBackItemTouch
     @Override
     public void onResume() {
         super.onResume();
-       // establishmentModalArrayList.clear();
+        //adapter.notifyDataSetChanged();
+        //establishmentModalArrayList.clear();
         displayData();
         deleteData();
         adapter.notifyDataSetChanged();
@@ -260,22 +262,33 @@ public class EstablishmentFragment extends Fragment implements CallBackItemTouch
     }
 
     public void deleteData(){
-        if (!establishmentModalArrayList.contains(modal) && modal != null ){
-            establishmentDatabaseHandler.deleteEstablishment(modal.getReviewId());
-            reviewsDatabaseHandler.deleteReviewData(modal.getReviewId());
+        if (deletedEst.size() > -1){
+            for (EstablishmentModal modal : deletedEst){
+                establishmentDatabaseHandler.deleteEstablishment(modal.getReviewId());
+                reviewsDatabaseHandler.deleteReviewData(modal.getReviewId());
+            }
             establishmentModalArrayList.clear();
+            deletedEst.clear();
             displayData();
-            modal = null;
         }
+//        if (modal != null ){
+//            establishmentDatabaseHandler.deleteEstablishment(modal.getReviewId());
+//            reviewsDatabaseHandler.deleteReviewData(modal.getReviewId());
+//            establishmentModalArrayList.clear();
+//            displayData();
+//            modal = null;
+//        }
     }
 
-    private EstablishmentModal modal = null;
+    //private EstablishmentModal modal = null;
+    private ArrayList<EstablishmentModal> deletedEst = new ArrayList<>();
     @Override
     public void onSwipe(RecyclerView.ViewHolder viewHolder, int position) {
         String name = establishmentModalArrayList.get(viewHolder.getAdapterPosition()).getEstablishmentName();
         final  EstablishmentModal deletedModal = establishmentModalArrayList.get(viewHolder.getAdapterPosition());
         final int deletedModalIndex = viewHolder.getAdapterPosition();
-        modal = deletedModal;
+        //modal = deletedModal;
+        deletedEst.add(deletedModal);
         //remove the item from the recyclerview
         adapter.removeItem(viewHolder.getAdapterPosition());
 
@@ -287,7 +300,8 @@ public class EstablishmentFragment extends Fragment implements CallBackItemTouch
             @Override
             public void onClick(View view) {
                 adapter.restoreItem(deletedModal,deletedModalIndex);
-                modal = null;
+               // modal = null;
+                deletedEst.remove(deletedEst.size()-1);
             }
         });
 

@@ -47,6 +47,22 @@ public class UserDatabaseHandler extends DatabaseHandler {
         }
     }
 
+    public boolean updateUserData(String name,String newPhone,String oldPhone){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+
+        values.put("name",name);
+        values.put("phoneNumber",newPhone);
+
+        long result = db.update("user",values," phoneNumber = ?",new String[]{oldPhone});
+
+        if (result == -1){
+            return false;
+        }else {
+            return true;
+        }
+    }
+
 
     public Cursor getData(){
         SQLiteDatabase db = this.getWritableDatabase();

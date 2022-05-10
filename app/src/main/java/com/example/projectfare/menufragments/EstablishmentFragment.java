@@ -242,6 +242,7 @@ public class EstablishmentFragment extends Fragment implements CallBackItemTouch
                 ));
             }
         }
+        adapter.notifyDataSetChanged();
     }
 
 

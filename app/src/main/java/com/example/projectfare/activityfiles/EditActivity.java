@@ -19,7 +19,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatButton;
 
 import com.example.projectfare.R;
 import com.example.projectfare.databasefiles.EstablishmentDatabaseHandler;
@@ -33,7 +32,6 @@ public class EditActivity extends AppCompatActivity {
     private FloatingActionButton photoEditor;
     private CircleImageView imageE;
     private EditText name,locationE,review;
-    private AppCompatButton saveButton;
     private String reviewId;
     private Spinner type;
     private String[] estTypes = {"Cafe","Bar","Restaurant","Others"};

@@ -163,7 +163,7 @@ public class AddEstablishment extends AppCompatActivity {
         relativeLayoutLoader = (RelativeLayout) findViewById(R.id.gifLoader);
 
         handler1.postDelayed(runnable1,0);
-        handler2.postDelayed(runnable2,1150);
+        handler2.postDelayed(runnable2,1200);
     }
 
     @Override
